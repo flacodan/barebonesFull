@@ -4,10 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css">
-    <title>Document</title>
+    <title>The Fighter App</title>
 </head>
 <body>
-    My Fighters app
+    <h1>The Fighter App</h1> 
+    <form id="createForm">
+        <h2>Create A New Fighter</h2>
+        <label for="create-name-input">Name</label>
+        <input id="create-name-input">
+        <label for="create-power-input">Power</label>
+        <input type="number" id="create-power-input">
+        <label for="create-health-input">Health</label>
+        <input type="number" id="create-health-input">
+        <button>CREATE</button>
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="/js"></script>
 </body>
 </html>
