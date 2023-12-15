@@ -30,15 +30,13 @@ app.get('/fighters', (req, res) => {
 })
 
 app.delete('/delete-fighter/:name', (req, res) => {
-    //delete name from db
     let name = req.params.name;
     for(let i = 0; i < db.length; i++) {
         if (db[i].name === name) {
-            //delete this from db
             db.splice(i, 1);
-            res.send(db);
         }
     }
+    res.send(db);
 })
 
 

@@ -38,10 +38,8 @@ deleteForm.addEventListener('submit', (evt) => {
     evt.preventDefault();
     axios.delete('/delete-fighter/' + deleteInput.value)
     .then((result) => {
-        console.log('delete!!!!');
-        loadFightersToDom(result.data);
-})
-    .catch(() => {})
+        loadFightersToDom(result.data);})
+    .catch((err) => {console.log(err);})
 })
 
 axios.get('/fighters')
