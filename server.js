@@ -7,7 +7,8 @@ app.use(express.json());
 
 let db = []; //our fake db
 
-
+//app.use(express.static(join(dirname(fileURLToPath(import.meta.url)), '/public')))
+//use this instead of the following
 app.get('/', (req, res) => {
     res.sendFile(join(dirname(fileURLToPath(import.meta.url)), '/public/index.html'))
 })
