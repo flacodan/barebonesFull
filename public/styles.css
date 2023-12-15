@@ -25,6 +25,9 @@ form > label, form > button {
 }
 
 button {
+    
+    display: flex;
+    align-items: center;
     border-radius: 16px;
     padding: 5px 10px;
     background-color: black;

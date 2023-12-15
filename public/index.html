@@ -8,6 +8,8 @@
 </head>
 <body>
     <h1>The Fighter App</h1> 
+    <div id="fighters-display">
+    </div>
     <form id="createForm">
         <h2>Create A New Fighter</h2>
         <label for="create-name-input">Name</label>
@@ -17,6 +19,13 @@
         <label for="create-health-input">Health</label>
         <input type="number" id="create-health-input">
         <button>CREATE</button>
+    </form>
+
+    <form id="deleteForm">
+        <h2>Delete A Fighter</h2>
+        <label for="delete-name-input">Who to delete?</label>
+        <input id="delete-name-input">
+        <button>DELETE</button>
     </form>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

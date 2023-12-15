@@ -25,6 +25,23 @@ app.post('/create-fighter', (req, res) => {
     res.status(200).send(db) //status 200 is default so we didn't need to put the status call for success, it's just an example
 })
 
+app.get('/fighters', (req, res) => {
+    res.status(200).send(db);
+})
+
+app.delete('/delete-fighter/:name', (req, res) => {
+    //delete name from db
+    let name = req.params.name;
+    for(let i = 0; i < db.length; i++) {
+        if (db[i].name === name) {
+            //delete this from db
+            db.splice(i, 1);
+            res.send(db);
+        }
+    }
+})
+
+
 app.listen(8080, () => {
     console.log('Server listening on port 8080');
 })
